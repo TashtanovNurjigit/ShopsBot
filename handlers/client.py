@@ -29,8 +29,8 @@ async def get_category(message: types.Message):
 
 
 async def delete(call: types.CallbackQuery):
-    await sqlite3_db.delete(call.data.replace('delete_ ', ''))
-    await call.answer(text=f'{call.data.replace("delete_ ", "")} удалена ', show_alert=True)
+    await sqlite3_db.delete(call.data.replace('delete_', ''))
+    await call.answer(text=f'{call.data.replace("delete_", "")} удалена ', show_alert=True)
 
 
 async def cancel_handler(message: types.Message, state: FSMContext):
