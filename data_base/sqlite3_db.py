@@ -58,6 +58,5 @@ async def sql_read_category(message):
 
 
 async def delete(data):
-    print('-'*80)
     cursor.execute('DELETE FROM category WHERE name = ?', (data,))
     base.commit()
